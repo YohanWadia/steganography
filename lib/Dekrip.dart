@@ -57,48 +57,35 @@ class Dekrip{
 
   Future<void> finishEveryThing() async {
     String message="";
-    final img.Image image = img.Image(width: 256,height: 256);
+    final img.Image image = img.Image(width: 128,height: 128);
 
-    int posX = 0;
-    for (int i = 0; i < 10; i++) {
-      final index = (i * 128 + posX);
+    
+    for (int i = 25; i < 81; i++) {
+      final index = (100 * 128 + i);
       final offset = index * 4;
 
       
-      final r = pixels[offset];   
-      final g = pixels[offset + 1];            
-      final b = pixels[offset + 2];  
-      
-      print("$r,$g,$b");
+      // final r = pixels[offset];   
+      // final g = pixels[offset + 1];            
+      // final b = pixels[offset + 2];        
+     
+
+
+    final b = pixels[offset];    // Blue channel
+    final g = pixels[offset + 1];// Green channel
+    final r = pixels[offset + 2];// Red channel 
+    final a = pixels[offset + 3];// Alpha channel
+      print("$index = $r,$g,$b... $r$g$b");
       message = message + "$r$g$b";
+      
+    }
 
-    //   if(i<4){binScore+="$r$b";}
-    //   else{
-    //     if(i%4==0 && i!=4){
-    //       if(binName=="00000000"){
-
-    //         break;
-    //       }
-          
-    //       final decimal = int.parse(binName, radix: 2);
-    //       final char = String.fromCharCode(decimal);
-    //       name+=char;
-    //       binName="";
-    //     }
-    //     binName+="$r$b";
-    //   }
-
-
-
-
-
-     }
-      print(message);
-
-
-
-
+     print(message);
   }
+
+
+
+
 
 
 }
