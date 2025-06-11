@@ -65,16 +65,16 @@ class Dekrip{
       final offset = index * 4;
 
       
-      // final r = pixels[offset];   
-      // final g = pixels[offset + 1];            
-      // final b = pixels[offset + 2];        
+       final r = pixels[offset];   
+       final g = pixels[offset + 1];            
+       final b = pixels[offset + 2];        
      
 
 
-    final b = pixels[offset];    // Blue channel
-    final g = pixels[offset + 1];// Green channel
-    final r = pixels[offset + 2];// Red channel 
-    final a = pixels[offset + 3];// Alpha channel
+    //final b = pixels[offset];    // Blue channel
+    //final g = pixels[offset + 1];// Green channel
+    //final r = pixels[offset + 2];// Red channel 
+    //final a = pixels[offset + 3];// Alpha channel
       print("$index = $r,$g,$b... $r$g$b");
       message = message + "$r$g$b";
       
