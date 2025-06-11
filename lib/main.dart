@@ -50,25 +50,15 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Column(
-        children: [
-          Center(
-            child: Image.asset('assets/images/proof.png'),
-          ),
-          ElevatedButton(
-            child: Text('Decrypt'),            
-            onPressed: () {
-              Dekrip obj = Dekrip();
-              obj.deCodeBinary();
-            },
-          ),
-
-        ],
+      body: Center(
+        child: Image.asset('assets/images/proof.png'),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: (){},
+        onPressed: (){
+          
+        },
         tooltip: 'Increment',
-        child: const Icon(Icons.add),
+        child: const Icon(Icons.lock_open),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
